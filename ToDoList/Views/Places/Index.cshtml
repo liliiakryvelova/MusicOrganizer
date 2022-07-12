@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My To-Do List!</title>
+    <title>My visited places!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <body>
@@ -11,14 +11,18 @@
     <h1>To Do List</h1>
     @if (Model.Count == 0)
     {
-    <p>There are no items in the list.</p>
+    <p>There are no placess in the list.</p>
     }
     <ul>
-    @foreach (Item item in Model)
+    @foreach (Place place in Model)
     {
-      <li>@item.Description</li>
+      <li><a href='/places/@place.Id'>@place.CityName</a></li>
     }
     </ul>
-    <a href="/items/new">Add a new item.</a>
+    <a href="/places/new">Add a new Place.</a>
+
+    <form action="/places/delete" method="post">
+      <button type="submit" name="button">Clear All Items</button>
+    </form>
   </body>
 </html>
