@@ -34,9 +34,9 @@ namespace ToDoList.Controllers
     }
 
     [HttpPost("/places")]
-    public ActionResult Create(string cityname)
+    public ActionResult Create(string cityname, int time, string imageUrl)
     {
-      Place myPlaces = new Place(cityname);
+      Place myPlaces = new Place(cityname, time, imageUrl);
       return RedirectToAction("Index");
     }
 
