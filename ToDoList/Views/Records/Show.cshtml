@@ -2,16 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My visited places!</title>
+    <title>Music Organizer</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <body>
-    <h1>To Do List Places Details: </h1>
+    <h1>List: </h1>
 
-    <h2>@Model.CityName</h2>
-    <h2>@Model.Time</h2>
-    <h2><img src="@Model.ImageURL" alt="@Model.CityName" width="250" height="250"></h2>
-    <a href='/places/new'>Add another place</a>
-    <a href='/places'>View all places</a>
+    <h2>@Model.Title</h2>
+    <h2>@Model.Artist</h2>
+    <a href='/records/new'>Add new record</a>
+    <a href='/records'>View all records</a>
+    
   </body>
 </html>
